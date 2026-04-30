@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* Prevent text inflation on iOS */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Ensure placeholder text is always visible */
+input::placeholder,
+select::placeholder,
+textarea::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+/* Force light mode — app is designed for light theme */
+:root {
+  color-scheme: light;
+}
+
+/* Better mobile tap experience */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Prevent any child element from causing horizontal overflow */
+main > * {
+  max-width: 100%;
+}
+
+/* Prevent content from hiding behind bottom nav on iOS */
+main {
+  padding-bottom: max(5rem, env(safe-area-inset-bottom, 5rem));
+}
+
+/* Safe area padding for bottom nav */
+nav.bottom-nav {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}

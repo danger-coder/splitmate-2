@@ -138,13 +138,13 @@ export default function ProfilePage() {
       <div className={`${accentBg} rounded-2xl p-5 text-white`}>
         {!editing ? (
           /* View mode */
-          <div className="flex items-center gap-4">
-            <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center text-4xl shrink-0">
+          <div className="flex items-center gap-3">
+            <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center text-3xl shrink-0">
               {userInfo.emoji}
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-white/70 text-xs mb-0.5">Your profile</p>
-              <h1 className="text-xl font-bold truncate">{userInfo.name}</h1>
+              <h1 className="text-lg font-bold truncate">{userInfo.name}</h1>
               <p className="text-white/70 text-xs mt-0.5">
                 {profile.expenseCount} expense{profile.expenseCount !== 1 ? "s" : ""} logged
               </p>
@@ -155,7 +155,7 @@ export default function ProfilePage() {
                 setEditEmoji(userInfo.emoji);
                 setEditing(true);
               }}
-              className="shrink-0 bg-white/20 active:bg-white/30 text-white text-xs font-medium px-3 py-2 rounded-xl transition-colors"
+              className="shrink-0 bg-white/20 active:bg-white/30 text-white text-xs font-medium px-2.5 py-2 rounded-xl transition-colors whitespace-nowrap"
             >
               ✏️ Edit
             </button>

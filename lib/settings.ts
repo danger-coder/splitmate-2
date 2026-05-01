@@ -67,6 +67,7 @@ export function saveSettings(patch: Partial<AppSettings>): void {
 // ─── currency ─────────────────────────────────────────────────────────────────
 
 export const SUPPORTED_CURRENCIES = [
+  { code: "NPR", symbol: "रू", locale: "ne-NP", label: "Nepali Rupee (रू)" },
   { code: "INR", symbol: "₹",  locale: "en-IN", label: "Indian Rupee (₹)" },
   { code: "USD", symbol: "$",  locale: "en-US", label: "US Dollar ($)" },
   { code: "EUR", symbol: "€",  locale: "de-DE", label: "Euro (€)" },

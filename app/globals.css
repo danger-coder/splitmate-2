@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Enable class-based dark mode (toggle .dark on <html>) */
+@custom-variant dark (&:is(.dark *));
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -27,6 +30,15 @@ textarea::placeholder {
 /* Force light mode — app is designed for light theme */
 :root {
   color-scheme: light;
+}
+
+/* Dark mode body */
+.dark {
+  color-scheme: dark;
+}
+.dark body {
+  background-color: #111827;
+  color: #f9fafb;
 }
 
 /* Better mobile tap experience */
